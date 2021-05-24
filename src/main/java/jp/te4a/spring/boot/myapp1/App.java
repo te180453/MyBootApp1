@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Hello world!
+ * Hello world!sprint-boot
  *
  */
  @Configuration
