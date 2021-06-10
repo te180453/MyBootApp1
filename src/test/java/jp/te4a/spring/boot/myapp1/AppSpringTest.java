@@ -44,12 +44,14 @@ public class AppSpringTest {
         viewResolver.setPrefix("/templates");
         viewResolver.setSuffix(".html");
         mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
+        System.out.println("テスト前処理");
     }
 
     @Test
     public void トップページ表示() throws Exception{
         MvcResult result = mockMvc.perform(get("/"))
         .andExpect(status().is2xxSuccessful())
+        .andExpect(content().string("Hello Spring World"))
         .andReturn();
     }
 }
